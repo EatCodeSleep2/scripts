@@ -19,7 +19,7 @@ local LocalPlayer = Players.LocalPlayer
 --creates the esp for the player when ran
 function createBillboard(player)
     if not player.Character then return end
-    if not player.Character:FindFirstChild("Head") then return end
+    if player.Character:FindFirstChild("Head") then
     if _G.EspEnabled == true then
             local char = player.Character or player.CharacterAdded:Wait()
             local bill = Instance.new("BillboardGui")
@@ -51,6 +51,7 @@ function createBillboard(player)
                 chams.OutlineTransparency = 1
             end
     end
+end
 end
 
 spawn(function()
