@@ -1,3 +1,10 @@
+--This is Made by Catimyth (CatOnLua)
+
+--If you are going to use, please give credits to me, CatOnLua.
+
+--Alpha v1.0.0
+
+
 _G.EspEnabled = true
 local Players = game:GetService("Players")
 
