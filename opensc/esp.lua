@@ -2,6 +2,8 @@
 
 --If you are going to use, please give credits to me, CatOnLua.
 
+--chams us the highlight instance on roblox
+
 --Alpha Release v1.0.1
 
 -- Global Variables - Can Be used in your own scripts
