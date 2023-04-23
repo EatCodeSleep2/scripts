@@ -1,5 +1,7 @@
 --This is Made by Catimyth (CatOnLua)
 
+--loadstring :  loadstring(game:HttpGet("https://raw.githubusercontent.com/PirateHB/scripts/main/opensc/esp.lua",true))()
+
 --If you are going to use, please give credits to me, CatOnLua.
 
 --chams us the highlight instance on roblox
