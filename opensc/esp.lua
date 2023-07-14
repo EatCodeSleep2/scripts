@@ -6,7 +6,7 @@
 
 --chams us the highlight instance on roblox
 
---Alpha Release v1.0.1
+--Alpha Release v1.0.2
 
 -- Global Variables - Can Be used in your own scripts
 _G.EspEnabled = true
@@ -57,7 +57,18 @@ function createBillboard(player)
     end
 end
 end
-
+function createBillboardItem(e)
+            if _G.ChamsEnabled then
+                local chams = Instance.new("Highlight")
+                chams.Name = "chamelem"
+                chams.Parent = e
+                chams.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+                chams.Enabled = true
+                chams.FillColor = _G.ChamsColor
+                chams.FillTransparency = 0.1
+                chams.OutlineTransparency = 1
+            end
+end
 spawn(function()
     while task.wait(_G.UpdateTime) do -- Update
         if _G.EspEnabled == false then
@@ -90,7 +101,12 @@ for i, player in ipairs(Players:GetPlayers()) do
         createBillboard(player)
     end
 end
-
+for i,v in ipairs(game.Workspace.Entities:GetChildren()) do
+    createBillboardItem(v)
+end
+game.Workspace.Entities.ChildAdded:Connect(function(ee)
+    createBillboardItem(ee)
+end)
 -- Connect to PlayerAdded event to create billboards for new players
 Players.PlayerAdded:Connect(function(player)
     if player ~= LocalPlayer then
